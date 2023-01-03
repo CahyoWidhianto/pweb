@@ -1,7 +1,7 @@
 
 
 <?php
-include_once ('Model/Mahasiswa.php');
+include_once ('../db/Model/mahasiswa.php');
 include_once('Model/Dosen.php');
 $noIndukDosen = $_REQUEST['no_induk_dosen'];
 $nim = $_REQUEST['nim_mahasiswa'];

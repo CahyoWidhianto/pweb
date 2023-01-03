@@ -11,7 +11,7 @@ while($dosen = mysqli_fetch_object($dsnList))
 
 
 ?>
-<form action="prosesUbah.php" method ="POST">
+<form action="../../view/Dosen/prosesUbah.php" method ="POST">
     <p>
         No Induk Dosen  <br>
         <input type="text" required name="no_induk_dosen" value=<?=$dsn->no_induk_dosen?> readonly>
@@ -57,7 +57,7 @@ while($dosen = mysqli_fetch_object($dsnList))
     </p>
 
     <p>
-        <button type="Submit">Ubah Data Dosen</button>
+        <button type="Submit" class="btn btn-success">Ubah Data Dosen</button>
     </p>
 
 </form>

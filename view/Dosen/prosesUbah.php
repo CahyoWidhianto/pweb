@@ -20,4 +20,4 @@ $dsn->pendidikan_terakhir_dosen = $pendidikanTerakhir;
 
 $dsn->update();
 
-header('Location: /List.php');
+header('Location: ../../index.php?page=listDosen');

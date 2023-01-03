@@ -11,7 +11,7 @@
 
 
             <div class="form-group">
-                <label for="">No Induk Dosen </label>
+                <label for="">Nama Dosen </label>
                 <input class="form-control" type="text" required name="nama_dosen"  />
             </div>
 

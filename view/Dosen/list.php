@@ -33,16 +33,16 @@
                         <td><?= $dosen->pendidikan_terakhir_dosen ?></td>
 
                         <td>
-                            <a class="btn btn-sm btn-warning-"
-                                href="formUbah.php?no_induk_dosen=<?= $dosen->no_induk_dosen ?>">Edit
+                            <a class="btn btn-sm btn-warning"
+                                href="index.php?page=editDosen&no_induk_dosen=<?= $dosen->no_induk_dosen ?>">Edit
                                 <i class="fa fa-edit"></i>
                             </a>|
                             <a class="btn btn-sm btn-danger"
-                                href="KonfirmasiHapus.php?no_induk_dosen=<?= $dosen->no_induk_dosen ?>">Hapus
+                                href="index.php?page=hapusDosen&no_induk_dosen=<?= $dosen->no_induk_dosen ?>">Hapus
                                 <i class="fa fa-trash-alt"></i>
                             </a>|
                             <a class="btn btn-primary"
-                                href="listMahasiswaPerwalian.php?no_induk_dosen=<?= $dosen->no_induk_dosen?>">Lihat Mahasiswa Perwalian
+                                href="index.php?page=listMahasiswaPerwalian&no_induk_dosen=<?= $dosen->no_induk_dosen?>">Lihat Mahasiswa Perwalian
                             </a>
                         </td>
                     </tr>

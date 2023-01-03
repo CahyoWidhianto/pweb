@@ -1,10 +1,10 @@
 <?php
-include ('../../Model/Mahasiswa.php');
+include ('../../Model/mahasiswa.php');
 
-$nim = $_REQUEST['nim_mahasiswa'];
-$nama = $_REQUEST['nama_mahasiswa'];
-$tglLahir = $_REQUEST['tgl_lahir_mahasiswa'];
-$jk = $_REQUEST['jenis_kelamin_mahasiswa'];
+$nim = $_REQUEST['nim'];
+$nama = $_REQUEST['nama'];
+$tglLahir = $_REQUEST['tgl'];
+$jk = $_REQUEST['jk'];
 $noIndukDosen = $_REQUEST['no_induk_dosen'];
 
 
@@ -19,4 +19,4 @@ $mhs->no_induk_dosen = $noIndukDosen;
 
 $mhs->insert();
 
-header('Location: /index.php?halaman=listMahasiswa');
+header('Location: ../../index.php?page=listMahasiswa');

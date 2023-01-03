@@ -32,11 +32,11 @@
                                 <td><?= $mahasiswa->nama_dosen . ' ' . $mahasiswa->gelar_dosen?></td>
                                 <td>
                                     <a class="btn btn-sm btn-warning"
-                                       href="/index.php?halaman=editMahasiswa&nim_mahasiswa=<?= $mahasiswa->nim_mahasiswa ?>">Edit
+                                       href="index.php?page=editMahasiswa&nim_mahasiswa=<?= $mahasiswa->nim_mahasiswa ?>">Edit
                                         <i class="fa fa-edit"></i>
                                     </a>
                                     <a class="btn btn-sm btn-danger"
-                                       href="/index.php?halaman=hapusMahasiswa&nim_mahasiswa=<?= $mahasiswa->nim_mahasiswa ?>">Hapus
+                                       href="/index.php?page=hapusMahasiswa&nim_mahasiswa=<?= $mahasiswa->nim_mahasiswa ?>">Hapus
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
                                 </td>

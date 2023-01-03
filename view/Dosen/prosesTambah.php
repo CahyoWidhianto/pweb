@@ -1,5 +1,5 @@
 <?php
-include ('../../Model/Dosen.php');
+include ('Model/Dosen.php');
 
 $noInduk = $_REQUEST['no_induk_dosen'];
 $nama = $_REQUEST['nama_dosen'];
@@ -21,3 +21,4 @@ $dsn->pendidikan_terakhir_dosen = $pendidikanTerakhir;
 $dsn->insert();
 
 header('Location: /index.php?halaman=listDosen');
+

@@ -25,9 +25,9 @@ while($dosen = mysqli_fetch_object($dsnList))
     Nama Dosen : <?=$dsn->nama_dosen?>
 </p>
 
-<form action="prosesHapus.php">
+<form action="view/Dosen/prosesHapus.php">
     <input type="hidden" name="no_induk_dosen" value="<?=$dsn->no_induk_dosen?>">
-    <a href="list.php"><< Kembali</a>
+    <a href="index.php?page=listDosen"><< Kembali</a>
     <button type="submit">Hapus</button>
 </form>
 

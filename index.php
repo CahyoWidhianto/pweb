@@ -21,13 +21,13 @@
                 <div class="card-header">Menu</div>
                 <div class="card-body">
                 </div>
-                <a class="btn btn-outline-secondary btn-lg" href="/index.php?halaman=listMahasiswa">List Mahasiswa</a><br>
+                <a class="btn btn-outline-secondary btn-lg" href="index.php?page=listMahasiswa">List Mahasiswa</a><br>
                 <P></P>
-                <a class="btn btn-outline-secondary btn-lg" href="/index.php?halaman=tambahMahasiswa">Tambah Mahasiswa</a><br>
+                <a class="btn btn-outline-secondary btn-lg" href="index.php?page=tambahMahasiswa">Tambah Mahasiswa</a><br>
                 <P></P>
-                <a class="btn btn-outline-secondary btn-lg " href="/index.php?halaman=listDosen">List dosen</a>
+                <a class="btn btn-outline-secondary btn-lg " href="index.php?page=listDosen">List dosen</a>
                 <p></p>
-                <a class="btn btn-outline-secondary btn-lg " href="/index.php?halaman=tambahDosen">Tambah dosen</a>
+                <a class="btn btn-outline-secondary btn-lg " href="index.php?page=tambahDosen">Tambah dosen</a>
 
             </div>
         </div>
@@ -37,34 +37,41 @@
 
         <div class="col-9">
             <?php
-            $halaman = $_REQUEST['halaman'];
-            if ($halaman === 'listMahasiswa'){
-                include_once 'view/Mahasiswa/list.php';
+            $halaman = "view/home.php";
+            if(isset($_REQUEST['page'])) {
+                $page = $_REQUEST['page'];
+                switch($page){
+                    case 'listMahasiswa';
+                    $halaman = 'view/Mahasiswa/list.php';
+                    break;
+                    case 'tambahMahasiswa';
+                    $halaman = 'view/Mahasiswa/formTambah.php';
+                    break;
+                    case 'hapusMahasiswa';
+                    $halaman = 'view/Mahasiswa/KonfirmasiHapus.php';
+                    break;
+                    case 'editMahasiswa';
+                    $halaman = 'view/Mahasiswa/formUbah.php';
+                    break;
+                    case 'listDosen';
+                    $halaman = 'view/Dosen/list.php';
+                    break;
+                    case 'tambahDosen';
+                    $halaman = 'view/Dosen/formTambah.php';
+                    break;
+                    case 'hapusDosen';
+                    $halaman = 'view/Dosen/KonfirmasiHapus.php';
+                    break;
+                    case 'editDosen';
+                    $halaman = 'view/Dosen/formUbah.php';
+                    break;
+                    case 'listMahasiswaPerwalian';
+                    $halaman = 'view/Dosen/listMahasiswaPerwalian.php';
+                    break;
+                }
             }
-            elseif ($halaman === 'tambahMahasiswa'){
-                include_once 'view/Mahasiswa/formTambah.php';
-            }
-            elseif ($halaman === 'hapusMahasiswa'){
-                include_once 'view/Mahasiswa/KonfirmasiHapus.php';
-            }
-            elseif ($halaman === 'editMahasiswa'){
-                include_once 'view/Mahasiswa/formUbah.php';
-            }
-            elseif ($halaman === 'listDosen'){
-                include_once 'view/Dosen/list.php';
-            }
-            elseif ($halaman === 'tambahDosen'){
-                include_once 'view/Dosen/formTambah.php';
-            }
-            elseif ($halaman === 'hapusDosen'){
-                include_once 'view/Dosen/KonfirmasiHapus.php';
-            }
-            elseif ($halaman === 'editDosen'){
-                include_once 'view/Dosen/formUbah.php';
-            }
-            elseif ($halaman === 'listMahasiswaPerwalian'){
-                include_once 'view/Dosen/listMahasiswaPerwalian.php';
-            }
+            include $halaman;
+
             ?>
 
         </div>
